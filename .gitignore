@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+
+# MWorks / Sysplorer 运行产物
+*.bak
+dsin.txt
+dsfinal.txt
+dslog.txt
+*.exe

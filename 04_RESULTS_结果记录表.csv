@@ -1,0 +1,17 @@
+﻿序号,模型（在 UAVSafetyChain.Task 下）,StopTime,路径RMSE(m),平均误差(m),最大误差(m),max|roll|(deg),max|pitch|(deg),15度超限累计时长(s),阶跃超调(%),备注
+0,ClimbEquivalenceCheck,50,0.228016,0.105061,1.135099,17.389903,16.71013,0.03,1.5248,当前RMSE=0.228016；与文档基准0.232890差2.09%；原ClimbEnhanced重跑=0.228024
+1,ClimbSafeERG,50,0.236546,0.111263,1.135149,9.839371,9.847411,0,1.524922,超限时长=0；相对文档原值+1.57%
+2,SpiralSafeERG,50,0.467209,0.238097,3.001278,9.299529,12.464942,0,,超限时长=0；相对文档原值-3.12%
+3,EightSafeERG,120,0.147845,0.071761,1.060083,12.502508,7.688461,0,,超限时长=0；相对文档原值-3.31%
+4,ClimbSafeFull,50,0.236552,0.111235,1.135099,9.839746,9.847683,0,1.524818,violationTime=0.000s；CBF累计修正=0.000000 rad*s
+5,SpiralSafeFull,50,0.467221,0.238101,3.001278,9.299459,12.429263,0,,violationTime=0.000s；CBF累计修正=0.000000 rad*s
+6,EightSafeFull,120,0.147848,0.07176,1.060092,12.470445,7.688296,0,,violationTime=0.000s；CBF累计修正=0.000000 rad*s
+7,ClimbERGOnly,50,0.236552,0.111235,1.135099,9.839746,9.847683,0,1.524818,仅ERG；CBF累计修正=0.000000 rad*s
+8,ClimbCBFOnly,50,0.22453,0.102122,1.135099,17.408533,16.709396,0.06,1.5248,仅CBF；超限累计时长=0.060s
+9,ClimbBaselineERG,50,0.279932,0.143788,1.369356,7.080819,7.082141,0,1.691141,基线PID+ERG；超限时长=0
+10,UAVFormation.Examples.ThreeUAVFormation,120,,,,,,,,maxFormationError=0.552288m；minSeparation=4.097131m；leaderTrackErrorMax=0.639396m
+,,,,,,,,,,
+【第5步 重新导出】,六个原模型也要一并重跑,,,,,,,,,用同一次运行重新导出并计算；已完成六个模型重跑
+,ClimbBaseline / ClimbEnhanced,50,,,,,,,,RMSE：0.275253 / 0.228024
+,SpiralBaseline / SpiralEnhanced,50,,,,,,,,RMSE：0.487183 / 0.474398
+,EightBaseline / EightEnhanced,120,,,,,,,,RMSE：0.172311 / 0.149095
